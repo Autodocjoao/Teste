@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;  /*limite da altura e tamanho para todos os elementos*/
+}
+
 *:not(h1) {  /*todos os elementos serão afetados quando uso o (*) no css  */
     margin: 0px;
     padding: 0px;
@@ -59,4 +63,29 @@ section button{
     font-size: 17px;
     font-weight: bold;
 
+}
+
+#segundo-link{
+    color: red;
+}
+
+.texto-verde{
+    color: green;   
+}
+
+.maiusculo{
+    text-transform: uppercase;
+}
+
+.banner{
+    background-image: url('../imagens/banner.jpg');
+    height: 100vh; /*parametro vh faz  a altura da imagem se adaptar para diferentes tipos  de tela ou smartphone */
+    background-repeat: no-repeat;  /*não deixa a imagem ser repitida lado a lado*/
+    background-size: cover; /*estica a imagem para as laterais*/
+    background-position: left top;  /*esse atributo dá prioridade para uma parte especifica da img*/
+    background-attachment: local; /*posso deixar a imagem fixa ou com o atributo scrool a imagem fica parada*/
+}
+
+.banner h1{
+    margin-top: 0;
 }
