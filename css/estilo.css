@@ -89,3 +89,68 @@ section button{
 .banner h1{
     margin-top: 0;
 }
+
+/*About*/
+
+div.titulo-banner{
+    background-image: url(../imagens/about-bannerr.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    height: 40vh;  /*viewport height pega a altura da sua sessão   e vw pega largura 100% */
+    line-height: 40vh;
+    
+}
+
+.titulo-banner h1{
+    font-size: 45px;
+    margin: 0;
+
+}
+
+.conteudo-principal{
+    padding: 40px 20px;
+}
+
+.conteudo-principal .video-about{
+    width: 45%;
+    display: inline-block;
+    padding: 40px;
+}
+
+.conteudo-principal .video-about video{
+    width: 100%;
+    
+}
+
+.conteudo-principal .texto{
+    width: 54%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 40px;
+    
+}
+
+.audio{
+    background-color: #f1f3f4;
+    border-top: #dcdcdc solid 1px;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.audio p{
+    text-transform: uppercase;
+    font-size: 18px;
+    
+}
+
+footer{
+    background-color: #5f4a90;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px;
+    
+}
