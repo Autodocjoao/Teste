@@ -14,5 +14,47 @@
     <p>Lorem, ipsum dolor <mark> sit amet consectetur </mark> adipisicing elit. Porro reiciendis sapiente quos magnam 
         odio optio <cite> eos nisi blanditiis a, eveniet </cite> voluptatum ipsam doloribus sit earum? Quas numquam neque omnis.</p>
 
+    <hr>  <!--Linha Horizontal-->
+
+    <h2>Exemplo de formulário</h2>
+
+    <form>
+        <label for="pass">Password</label> <br>
+        <input type="password" name="" id="pass" placeholder="Password">
+        <br> <br>
+        <label for="curso">Curso</label> <br>
+        <input type="radio" name="curso" id="fullstack" value="Full Stack" />
+        <label for="fullstack">fullstack</label>
+        <br>
+        <input type="radio" name="curso" id="Marketing" value="Marketing" checked/>
+        <label for="Marketing">Marketing</label>
+        <br> <br>
+        <label for="diaSemana">Dia da Semana</label> <br>
+        <input type="checkbox" name="diaSemana[]" id="segunda" value="segunda-feira">
+        <label for="segunda">segunda-feira</label> <br>
+        <input type="checkbox" name="diaSemana[]" id="terca" value="Terça-feira" checked>
+        <label for="terca">Terça-feira</label>
+        <br> <br>
+        <label for="pais">País</label>
+        <select name="pais" id="pais">
+            <option selected disabled>Selecione um País</option>
+            <option value="BR">Brasil</option>
+            <option value="AR">Argentina</option>
+            <option value="EUA">Estados unidos</option>
+            
+        </select>
+        <br>
+        <br>
+        <label for="mensagem">Mensagem</label>
+        <br>
+        <textarea name="mensagem" id="msg" cols="30" rows="10"></textarea>
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+
+        
+    </form>
+
+
 </body>
 </html>
