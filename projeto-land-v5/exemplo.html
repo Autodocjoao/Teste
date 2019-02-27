@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplo tag semantica</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: aquamarine;
+        }
+        input{
+            background-color: #000;
+        }
+
+        input:focus{
+            background-color: blue;
+        }
+
+        input:hover{
+            background-color: chartreuse;
+        }
+
+        .container{
+            border: 3px solid black;
+        }
+
+        .um{
+            background-color: white;
+            display: inline-block;
+            padding: 20px;
+            width:50%;
+
+        }
+        .dois{
+            background-color: black;
+            display: inline-block;
+            padding: 20px;
+            width:50%;
+        }
+        .tres{
+            background-color: red;
+            display: inline-block;
+            padding: 20px;
+            width:50%;
+        }
+
+        .box{
+            margin: 20px;
+            height: 100px;
+            border: 2px solid red;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem, <strong> ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis sapiente quos magnam 
+        odio optio quo eos nisi blanditiis a, eveniet voluptatum ipsam doloribus sit earum? Quas numquam neque omnis.</strong></p>
+    <p>Lorem, <em> ipsum dolor </em> sit amet consectetur adipisicing elit. Porro reiciendis sapiente quos magnam 
+        odio optio quo eos nisi blanditiis a, eveniet voluptatum ipsam doloribus sit earum? Quas numquam neque omnis.</p>
+    <p>Lorem, ipsum dolor <mark> sit amet consectetur </mark> adipisicing elit. Porro reiciendis sapiente quos magnam 
+        odio optio <cite> eos nisi blanditiis a, eveniet </cite> voluptatum ipsam doloribus sit earum? Quas numquam neque omnis.</p>
+
+    <hr>  <!--Linha Horizontal-->
+
+    <h2>Exemplo de formulário</h2>
+
+    <form>
+        <label for="pass">Password</label> <br>
+        <input type="password" name="" id="pass" placeholder="Password">
+        <br> <br>
+        <label for="curso">Curso</label> <br>
+        <input type="radio" name="curso" id="fullstack" value="Full Stack" />
+        <label for="fullstack">fullstack</label>
+        <br>
+        <input type="radio" name="curso" id="Marketing" value="Marketing" checked/>
+        <label for="Marketing">Marketing</label>
+        <br> <br>
+        <label for="diaSemana">Dia da Semana</label> <br>
+        <input type="checkbox" name="diaSemana[]" id="segunda" value="segunda-feira">
+        <label for="segunda">segunda-feira</label> <br>
+        <input type="checkbox" name="diaSemana[]" id="terca" value="Terça-feira" checked>
+        <label for="terca">Terça-feira</label>
+        <br> <br>
+        <label for="pais">País</label>
+        <select name="pais" id="pais">
+            <option selected disabled>Selecione um País</option>
+            <option value="BR">Brasil</option>
+            <option value="AR">Argentina</option>
+            <option value="EUA">Estados unidos</option>
+            
+        </select>
+        <br>
+        <br>
+        <label for="mensagem">Mensagem</label>
+        <br>
+        <textarea name="mensagem" id="msg" cols="30" rows="10"></textarea>
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+
+        
+    </form>
+    <hr>
+    <h2>Exemplo Display</h2>
+
+    <div class="container">
+        <span class="um">1</span>
+        <span class="dois">2</span>
+        <span class="tres">3</span>
+    </div>
+
+    <div class="box">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam facere perspiciatis natus laboriosam enim deserunt rem inventore quibusdam iste quasi, in nisi tenetur nostrum exercitationem quia eum dolore cum quis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ea officiis adipisci voluptatem nobis harum. Delectus tempora animi impedit ducimus? Ex dolores ad libero hic quaerat? Optio est nesciunt maiores!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nihil quos totam numquam dolore itaque neque eos, eligendi repellendus. Similique repellat amet veritatis molestias explicabo fugit dolorem eligendi accusamus architecto?</p>
+
+    </div>
+
+</body>
+</html>
