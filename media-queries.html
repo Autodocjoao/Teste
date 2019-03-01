@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media-query</title>
+    <style>
+        *{
+            box-sizing: border-box;     /*respeitar o tamanho */
+        }
+        .box{
+            background-color: darkcyan;
+            padding: 10px;
+            display:inline-block;
+            width: 49%;
+        }
+
+        .box2{
+            background-color: rgb(177, 218, 29);
+            padding: 10px;
+            display: inline-block;
+            width: 49%;
+        }
+
+        @media (max-width: 500px){    /*Abrindo o Media Query*/
+            /* body{
+                background-color: red;
+            } */
+            .box, .box2{
+                display:  block;
+                width: 100%; 
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>@Media</h1>
+    <div class="box">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe doloremque quam eveniet consequuntur libero tempora eius autem assumenda dolorem? Dolor, possimus ullam adipisci inventore illo alias libero reprehenderit consequatur neque.</p>
+    </div>
+    <div class="box2">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, nobis quam alias, inventore debitis a esse, quo dicta accusantium fuga ab reiciendis quas dolorum laborum impedit molestias tempora illum quos.</p>
+    </div>
+</body>
+</html>

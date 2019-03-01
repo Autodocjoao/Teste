@@ -5,6 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exemplo tag semantica</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: aquamarine;
+        }
+        input{
+            background-color: #000;
+        }
+
+        input:focus{
+            background-color: blue;
+        }
+
+        input:hover{
+            background-color: chartreuse;
+        }
+
+        .container{
+            border: 3px solid black;
+        }
+
+        .um{
+            background-color: white;
+            display: inline-block;
+            padding: 20px;
+            width:50%;
+
+        }
+        .dois{
+            background-color: black;
+            display: inline-block;
+            padding: 20px;
+            width:50%;
+        }
+        .tres{
+            background-color: red;
+            display: inline-block;
+            padding: 20px;
+            width:50%;
+        }
+
+        .box{
+            margin: 20px;
+            height: 100px;
+            border: 2px solid red;
+            overflow: auto;
+        }
+    </style>
 </head>
 <body>
     <p>Lorem, <strong> ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis sapiente quos magnam 
@@ -54,7 +105,21 @@
 
         
     </form>
+    <hr>
+    <h2>Exemplo Display</h2>
 
+    <div class="container">
+        <span class="um">1</span>
+        <span class="dois">2</span>
+        <span class="tres">3</span>
+    </div>
+
+    <div class="box">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam facere perspiciatis natus laboriosam enim deserunt rem inventore quibusdam iste quasi, in nisi tenetur nostrum exercitationem quia eum dolore cum quis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ea officiis adipisci voluptatem nobis harum. Delectus tempora animi impedit ducimus? Ex dolores ad libero hic quaerat? Optio est nesciunt maiores!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nihil quos totam numquam dolore itaque neque eos, eligendi repellendus. Similique repellat amet veritatis molestias explicabo fugit dolorem eligendi accusamus architecto?</p>
+
+    </div>
 
 </body>
 </html>

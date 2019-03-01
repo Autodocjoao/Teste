@@ -9,6 +9,7 @@
 
 body{
     font-family: 'Arial',sans-serif; /*fonte principal*/
+    overflow-x: hidden;
 }
 
 header{
@@ -17,6 +18,9 @@ header{
     background-color: #fff;
     /*margin = espaço externo*/
     /*padding = espaço interno*/
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 }
 
 nav ul{
@@ -51,19 +55,51 @@ nav ul li a{
     text-decoration: none;  /*remover o sublinhado abaixo do link*/
 }
 
-section{
+section.banner{
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+    background-image: url('../imagens/banner.jpg');
+    height: 100vh; /*parametro vh faz  a altura da imagem se adaptar para diferentes tipos  de tela ou smartphone */
+    background-repeat: no-repeat;  /*não deixa a imagem ser repitida lado a lado*/
+    background-size: cover; /*estica a imagem para as laterais*/
+    background-position: center top;  /*esse atributo dá prioridade para uma parte especifica da img*/
+    background-attachment: local; /*posso deixar a imagem fixa ou com o atributo scrool a imagem fica parada*/
 }
 
-section button{
-    background-color: #5f4a90;
-    border: 1px solid #5f4a90;
-    color: #fff;
+section.banner .conteudo{
+    margin-bottom: 90px;
+}
+
+section.banner h1{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+section.banner p{
+    text-transform: uppercase;   /*Deixa o Texto todo em Maiúscula*/
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+section.banner button{
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #000;
     padding: 15px 35px;
     border-radius: 50px;
     font-size: 17px;
-    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: normal;
+}
 
+section.banner button:hover{
+    background-color: #5f4a90;
+    border: 1px solid #5f4a90;
+    color: #fff;
 }
 
 #segundo-link{
@@ -78,22 +114,13 @@ section button{
     text-transform: uppercase;
 }
 
-.banner{
-    background-image: url('../imagens/banner.jpg');
-    height: 100vh; /*parametro vh faz  a altura da imagem se adaptar para diferentes tipos  de tela ou smartphone */
-    background-repeat: no-repeat;  /*não deixa a imagem ser repitida lado a lado*/
-    background-size: cover; /*estica a imagem para as laterais*/
-    background-position: left top;  /*esse atributo dá prioridade para uma parte especifica da img*/
-    background-attachment: local; /*posso deixar a imagem fixa ou com o atributo scrool a imagem fica parada*/
-}
-
 .banner h1{
     margin-top: 0;
 }
 
 /*About*/
 
-div.titulo-banner{
+.titulo-banner{
     background-image: url(../imagens/about-bannerr.jpg);
     background-size: cover;
     color: #fff;
@@ -112,6 +139,7 @@ div.titulo-banner{
 
 .conteudo-principal{
     padding: 40px 20px;
+    min-height: 91vh;
 }
 
 .conteudo-principal .video-about{
@@ -122,7 +150,7 @@ div.titulo-banner{
 
 .conteudo-principal .video-about video{
     width: 100%;
-    
+    object-fit: cover;
 }
 
 .conteudo-principal .texto{
@@ -152,7 +180,7 @@ footer{
     text-align: center;
     color: #fff;
     font-size: 16px;
-    padding: 15px;
+    padding: 20px;
     
 }
 
@@ -163,13 +191,15 @@ form#contact{
     border: 1px solid #5f4a90;
     padding: 40px;
     width: 500px;
+    max-width: 100%;
     border-radius: 8px;
-    margin: 0 auto;
+    margin: 50px auto;
     background-color: rgba(255,255,255,0.8)
 }
 
 #contact h1{
     text-align: center;
+    margin-top: 0;
 }
 
 #contact input:not([type="checkbox"]),
@@ -180,10 +210,13 @@ form#contact{
     padding: 5px;
     margin-bottom: 10px;
     background-color: transparent;
+    text-align: center;
+    outline: none;
 }
 
 #contact textarea{
     height: 130px;
+    resize: none;
 }
 
 #contact button{
@@ -197,10 +230,83 @@ form#contact{
     
 }
 
+#contact button:hover{
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
 .pagina-contato{
     background-image: url(../imagens/bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
+}
+
+
+/*Galerias*/
+.galeria{
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;   /*Espaçamento de todos os itens na horizontal*/
+    flex-wrap: wrap;
+
+}
+
+.galeria-item{
+    width: 380px;
+    position: relative;
+    display: inline-block;
+    margin: 15px 0;
+    
+}
+
+.galeria-item img{
+    width: 100%;
+    
+}
+
+.galeria-item .caixa-botao{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.galeria-item .caixa-botao button{
+    background-color: white;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    border: none;
+    
+}
+
+.galeria-item .caixa-botao button:hover{
+    background-color: #5f4a90;
+    color: white;
+    cursor: pointer;
+}
+
+@media (min-width:540px) and (max-width:960px){
+    .conteudo-principal .video-about{
+        width: 100%; 
+    }
+
+    .conteudo-principal .texto{
+        width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
+    .conteudo-principal .video-about{
+        width: 100%; 
+        padding: 20px;
+    }
+
+    .conteudo-principal .texto{
+        width: 100%;
+        padding: 20px;
+    }
 }
