@@ -23,6 +23,27 @@ header{
     z-index: 2;
 }
 
+label[for="bt_menu"]{
+    padding: 5px;
+    background-color: #5f4a90;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    
+}
+
+#bt_menu{
+    display: none;
+}
+
+label[for="bt_menu"]{
+    display: none;
+}
+
 nav ul{
     list-style: none; /*tirar o estilo da lista*/
     margin: 0;
@@ -289,24 +310,106 @@ form#contact{
     cursor: pointer;
 }
 
-@media (min-width:540px) and (max-width:960px){
-    .conteudo-principal .video-about{
-        width: 100%; 
+@media (min-width:540px) and (max-width: 960px) {
+    /* body {
+        background-color: purple;
+    } */
+
+    label[for="bt_menu"]{
+        display: block;
+        margin: 5px;
+        float: right;
+        margin-top: -1px;
+        background-color: #000;
     }
 
-    .conteudo-principal .texto{
+    #bt_menu:checked ~ .menu{
+        margin: 0;
+    }
+
+    #bt_menu{
+        right: 100px;
+    }
+
+    .menu ul li{
         width: 100%;
+        text-align: center;
+        float: none;
+        padding: 10px;
+    }
+
+    .menu ul li:hover{
+        background-color: #5f4a90;
+        
+    }
+    .menu ul li a:hover{
+        color: #fff;
+    }
+
+    .menu{
+        margin: -100%;
+        transition: all .4s;
+        width: 100%;
+    }
+
+    .conteudo-principal .video-about {
+        width: 100%;
+    }
+
+    
+.conteudo-principal .texto {
+    width: 100%;
+
     }
 }
 
 @media (max-width: 540px) {
-    .conteudo-principal .video-about{
-        width: 100%; 
-        padding: 20px;
-    }
-
-    .conteudo-principal .texto{
+    .conteudo-principal .video-about {
         width: 100%;
         padding: 20px;
     }
+    
+.conteudo-principal .texto {
+    width: 100%;
+    padding: 20px;
+ }
+
+ label[for="bt_menu"]{
+    display: block;
+    margin: 5px;
+    float: right;
+    margin-top: -1px;
+}
+
+#bt_menu:checked ~ .menu{
+    margin: 0;
+}
+
+#bt_menu{
+    right: 100px;
+}
+
+.menu ul li{
+    width: 100%;
+    float: none;
+    
+}
+
+.menu ul li:hover{
+    background-color: #5f4a90;
+    
+}
+.menu ul li a:hover{
+    color: #fff;
+}
+
+.menu{
+    margin: -100%;
+    transition: all .4s;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    
+}
 }
