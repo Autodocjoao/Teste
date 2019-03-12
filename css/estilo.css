@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;  /*limite da altura e tamanho para todos os elementos*/
+    text-decoration: none; /*none remove o sublinhado abaixo do link*/
 }
 
 *:not(h1) {  /*todos os elementos serão afetados quando uso o (*) no css  */
@@ -66,7 +67,7 @@ nav ul li{
     display: inline-block;    /*tirar o estilo da lista, os botoes do menu ficao lado a lado*/
     /*padding: 0 10px 15px;  primeira topo, segunda laterais, terceira baixo*/
     /*padding: 0 10px 15px 20px;  primeira topo, segunda direita, terceira baixo, quarta esquerda*/
-    padding: 0 10px;  /*primeira vertical, segunda horizontal*/
+    padding: 0 30px;  /*primeira vertical, segunda horizontal*/
     /*padding: 10px;  padding 10px para todos os lados*/
 
 }
